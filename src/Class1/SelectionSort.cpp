@@ -3,14 +3,8 @@
 
 using namespace std;
 
-class Solution {
+class SelectionSort {
 public:
-  void swap(int& a, int& b) {
-    int tmp = a;
-    a = b;
-    b = tmp;
-  }
-
   void selectionSort(vector<int>& input) {
     if (input.size() == 0) return;
     int len = input.size();
@@ -25,5 +19,12 @@ public:
       }
       swap(input[i], input[min_index]);
     }
+  }
+
+private:
+  void swap(int& a, int& b) {
+    int tmp = a;
+    a = b;
+    b = tmp;
   }
 };
